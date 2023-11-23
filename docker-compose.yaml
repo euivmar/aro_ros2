@@ -1,10 +1,9 @@
 version: '3.8'
 services:
   ros2:
-    tty: true
-    image: aro:ros2-humble-nvidia
-    build: ./Dockerfile
+    image: skyrexdev/ros2-humble-nvidia:latest
     container_name: ros2
+    build: ./
     environment:
       - DISPLAY
     volumes:

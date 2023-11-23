@@ -9,7 +9,7 @@ Los scripts de instalación de ROS2, gazebo y el software necesarios están sumi
 Para compilar la imagen, utilizamos la orden `docker build`. Con el argumento `-t` le asignamos el tag que queramos (nombre:version).
 
 ```sh
-docker build . -t aro:ros2-humble-nvidia
+docker build . -t {usuario}/ros2-humble-nvidia:{tag}
 ```
 
 ## Push de la imagen a DockerHub
@@ -23,7 +23,7 @@ docker login
 Pushear la imagen.
 
 ```sh
-docker push aro:ros2-humble-nvidia
+docker push {usuario}/ros2-humble-nvidia:{tag}
 ```
 
 ## docker-compose

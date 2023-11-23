@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  ros2:
+    tty: true
+    image: aro:ros2-humble-nvidia
+    build: ./Dockerfile
+    container_name: ros2
+    environment:
+      - DISPLAY
+    volumes:
+      - $PWD/:/mnt/scripts
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]

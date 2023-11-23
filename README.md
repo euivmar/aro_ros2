@@ -12,6 +12,12 @@ Para compilar la imagen, utilizamos la orden `docker build`. Con el argumento `-
 docker build . -t {usuario}/ros2-humble-nvidia:{tag}
 ```
 
+Opcionalmente, también se puede compilar con `docker compose`
+
+```sh
+docker compose build
+```
+
 ## Push de la imagen a DockerHub
 
 Iniciar sesión en DockerHub:

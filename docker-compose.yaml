@@ -7,6 +7,8 @@ services:
     build: ./
     environment:
       - DISPLAY
+      - GAZEBO_AUDIO_DISABLED=1
+      - TURTLEBOT3_MODEL=burger
     volumes:
       - $PWD/:/mnt/scripts
       - /tmp/.X11-unix:/tmp/.X11-unix

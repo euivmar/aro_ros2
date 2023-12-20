@@ -44,6 +44,11 @@ Para crear una instancia de nuestro contenedor, utilizaremos el fichero `docker-
 ```sh
 docker compose up -d
 ```
+## Dar permisos a los contenedores para el servidor x11
+
+```sh
+xhost local:root
+```
 
 ## Abrir una terminal dentro del contenedor
 
